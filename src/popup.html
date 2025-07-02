@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Job Tracker Extension</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <div id="authSection">
+    <h3>Sign Up</h3>
+    <form id="signupForm">
+      <input type="email" id="signupEmail" placeholder="Email" required />
+      <input type="password" id="signupPassword" placeholder="Password" required />
+      <button type="submit">Sign Up</button>
+    </form>
+
+    <h3>Login</h3>
+    <form id="loginForm">
+      <input type="email" id="loginEmail" placeholder="Email" required />
+      <input type="password" id="loginPassword" placeholder="Password" required />
+      <button type="submit">Login</button>
+    </form>
+  </div>
+
+  <div id="appSection" style="display:none;">
+    <p>Logged in as: <span id="userEmail"></span> <button id="logoutBtn">Logout</button></p>
+
+    <form id="jobForm">
+      <input type="text" id="title" placeholder="Job Title" required />
+      <input type="text" id="company" placeholder="Company" required />
+      <textarea id="description" placeholder="Job Description"></textarea>
+      <input type="url" id="url" placeholder="Job URL" required />
+      <button type="submit">Save Job</button>
+    </form>
+
+    <h3>Saved Jobs</h3>
+    <table id="jobTable">
+      <thead>
+        <tr>
+          <th>Title</th><th>Company</th><th>Description</th><th>URL</th><th>Delete</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </div>
+
+  <script type="module" src="./popup.js"></script>
+</body>
+</html>
